@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #ffffff;">
+  <div style="  color :azure; margin-top: 5px; margin-left: 7px; margin-right: 7px;
+    height: 50px;
+    background-color:#dc143c; ">
+    <header>
+      <div style="text-align: center; ">
+        <h2 style="padding: 5px 0;"> Result Management System </h2>
+      </div>
+    </header>
+  </div>
+
+  <div style="
+    display:flex;">
+    <form action="/NewStudent" method="POST" style="margin:auto; padding-top: 70px; color:#dc143c; ">
+      <h4 style="text-align: center;"> Add Student Details... </h4> <br>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter the student's Name">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="text" class="form-control" id="dob" name="dob" placeholder="Enter the student's Date of Birth">
+      </div>
+
+      <div class="form-group">
+        <label for="score">Score</label>
+        <input style="width: 5in;" type="text" class="form-control" id="score" name="score"
+          placeholder="Enter the student's Date of Birth">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+  </div>
+</body>
+
+</html>

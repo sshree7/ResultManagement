@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #ffffff;">
+    <div style="  color :azure; margin-top: 5px; margin-left: 7px; margin-right: 7px;
+    height: 50px;
+    background-color:#dc143c; ">
+        <header>
+            <div style="text-align: center; ">
+                <h2 style="padding: 5px 0;"> Result Management System </h2>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="container mb-5 mt-5">
+
+        <div style="text-align: right; padding-right: 30px;">
+            <a class="btn btn-outline-dark" href="/AddStudent">Add Record</a> &nbsp;
+            <a class="btn btn-outline-dark" href="/TeacherLogin">Log Out</a>
+
+        </div> <br> <br>
+
+        <h6>Total students: <%= studentList.length%>
+        </h6>
+        <div class="container mb-5 mt-3">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center" scope="col">Roll No</th>
+                            <th style="text-align: center" scope="col">Name</th>
+                            <th style="text-align: center" scope="col">Date of Birth</th>
+                            <th style="text-align: center" scope="col">Score</th>
+                            <th style="text-align: center" scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% for(var i=0; i < studentList.length; i++) { %>
+
+
+                            <tr>
+                                <td style="text-align: center">
+                                    <%= studentList[i].id %>
+                                </td>
+                                <td style="text-align: center">
+                                    <%= studentList[i].name %>
+                                </td>
+                                <td style="text-align: center">
+                                    <%= studentList[i].dob %>
+                                </td>
+                                <td style="text-align: center">
+                                    <%= studentList[i].score %>
+                                </td>
+                                <td style="text-align: center">
+                                    <a href="/edit/<%= studentList[i].id %>" style="line-height: 10px;"
+                                        class="btn btn-outline-dark">Edit</a>
+                                    <a href="delete/<%= studentList[i].id %>" style="line-height: 10px;"
+                                        class="btn btn-outline-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <br>
+</body>
+
+</html>
